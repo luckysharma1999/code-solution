@@ -1,3 +1,4 @@
+#include<iostream>
 #include<unordered_map>
 #include<queue>
 #include<list>
@@ -28,8 +29,8 @@ vector<int> shortestPath( vector<pair<int,int>> edges , int n , int m, int s , i
         
         for(auto child:adj[front]){
             if(!visited[child]){
-                 visited[child] = true;
-                 parent[child] = front;
+                visited[child] = true;
+                parent[child] = front;
                 q.push(child);
             }
         }
@@ -38,8 +39,9 @@ vector<int> shortestPath( vector<pair<int,int>> edges , int n , int m, int s , i
     vector<int> ans ;
     int currentNode=t;
     ans.push_back(t);
+    
     while(currentNode!=s){
-         currentNode=parent[currentNode];
+        currentNode=parent[currentNode];
         ans.push_back(currentNode);
     }
     reverse(ans.begin(),ans.end());
