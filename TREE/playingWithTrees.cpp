@@ -36,9 +36,9 @@ void preOrder(node* root){
     }
     cout<<root->data<<" ";//N
 
-    postOrder(root->left); //L
+    preOrder(root->left); //L
 
-    postOrder(root->right);//R
+    preOrder(root->right);//R
 
     
 
