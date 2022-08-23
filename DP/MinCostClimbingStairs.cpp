@@ -43,7 +43,7 @@ int minCostClimbingStairs(vector<int>& cost) {
     
     int n = cost.size();
     vector<int> dp(n+1,-1);
-    //why n+1?becoz we have to store the value of 0 as well
+    //why n+1?becoz we have to store the value of 0 as well and return value at 3
     //eg n=3 means we have to reach 3rd stair but indexing of array is 0 1 2
     //so we need n+1 array size 0 1 2 3 to store the cost at index 3 and return it
     
